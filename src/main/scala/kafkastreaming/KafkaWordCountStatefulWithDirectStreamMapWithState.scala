@@ -30,7 +30,7 @@ object KafkaWordCountStatefulWithDirectStreamMapWithState
 
     val words = kafkaStream.flatMap(x =>  x._2.split(" "))
     val wordDstream = words.map(x => (x, 1))
-
+    //Pass key ,value and state ?
     val mappingFunc = (word: String, one: Option[Int], state: State[Int]) => {
       val sum = one.getOrElse(0) + state.getOption.getOrElse(0)
       LogUtil.logger.error(s"word :$word,sum:$sum")
