@@ -31,12 +31,6 @@ object StatefulEventProcessor
     val ssc = new StreamingContext(conf, windowSize)
     ssc.checkpoint("C:/checkpoint/") // set checkpoint directory
 
-    val sc = ssc.sparkContext
-    sc.setLogLevel("ERROR")
-
-    Logger.getRootLogger.setLevel(Level.ERROR)
-    Logger.getLogger("org").setLevel(Level.WARN)
-    Logger.getLogger("akka").setLevel(Level.WARN)
 
 
     val topicName = "events"
