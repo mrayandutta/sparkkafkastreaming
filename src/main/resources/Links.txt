@@ -1,3 +1,4 @@
 http://asyncified.io/
 http://www.riptutorial.com/apache-spark/example/6277/pairdstreamfunctions-mapwithstate
 https://blog.ippon.tech/testing-strategy-apache-spark-jobs/
+https://blog.ippon.tech/testing-strategy-for-spark-streaming/
